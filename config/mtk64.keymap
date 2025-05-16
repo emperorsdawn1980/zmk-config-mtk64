@@ -61,7 +61,7 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kt NUMBER_0  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kt NUMBER_0  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &kp UP_ARROW  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &trans  &trans  &trans  &kp DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <
