@@ -22,7 +22,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <10>; // スクロールのタップ時間
         };
 
         // 水平スクロール用のbehaviorの設定
@@ -32,7 +32,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <10>; // スクロールのタップ時間
         };
     };
 };
