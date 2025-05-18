@@ -61,7 +61,7 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10  &kp F11  &trans  &kp ASTERISK  &kp CARET  &kp TILDE2  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &kp SLASH  &kp INTERNATIONAL_2  &kp INTERNATIONAL_3  &kp LANGUAGE_5  &kp LANGUAGE_3  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp SLASH  &trans  &kp INTERNATIONAL_5  &kp INTERNATIONAL_4  &kp LANG_ZENKAKUHANKAKU  &kp LANGUAGE_6  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kt NUMBER_0  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &kp UP_ARROW  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &trans  &trans  &trans  &kp DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10  &kp F11  &trans  &kp EQUAL  &kp UNDER  &kp TILDE2  &kp INTERNATIONAL_1  &kp LANG_HIRAGANA  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &kp LANG_KATAKANA  &kp LANGUAGE_4  &kp LANG_ZENKAKUHANKAKU  &kp LANGUAGE_5  &kp LANGUAGE_3  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp SLASH  &trans  &kp HASH  &kp RIGHT_BRACE  &kp RBKT  &kp GRAVE  &kp QMARK  &trans  &trans  &trans  &kt NUMBER_0  &kt NUMBER_0  &kp PERIOD  &trans  &trans  &trans  &kp BACKSLASH  &trans  &trans  &kp UP_ARROW  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &trans  &trans  &trans  &kp DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <
