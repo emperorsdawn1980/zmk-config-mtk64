@@ -38,6 +38,22 @@
 };
 
 / {
+    macros {
+        window_move: window_move {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp RS(LEFT)>;
+            label = "WINDOW_MOVE";
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -53,7 +69,7 @@
 
         layer_1 {
             bindings = <
-&kp LANG5  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &kp LANGUAGE_5  &kp RC(X)  &mkp MB2  &mkp MB1  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &kp UP_ARROW  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &trans  &trans  &trans  &kp DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LANG5  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &window_move  &kp RC(X)  &mkp MB2  &mkp MB1  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &trans  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
