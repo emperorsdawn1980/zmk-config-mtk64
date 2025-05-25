@@ -17,22 +17,24 @@
     behaviors {
         // 垂直スクロール用のbehaviorの設定
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        scroll_up_down: beh_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <10>; // スクロールのタップ時間
+            label = "beh_mouse_wheel_up_down";
         };
 
         // 水平スクロール用のbehaviorの設定
 
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+        scroll_left_right: beh_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
             tap-ms = <10>; // スクロールのタップ時間
+            label = "beh_mouse_wheel_left_right";
         };
     };
 };
@@ -58,7 +60,7 @@
         compatible = "zmk,combos";
 
         window_move2 {
-            bindings = <&kp LS(LEFT_WIN)>;
+            bindings = <&kp F13>;
             key-positions = <19 51 24>;
         };
     };
@@ -91,15 +93,12 @@
 &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp ASTRK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &trans  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp TAB LC(TAB) 
-                &inc_dec_kp PG_UP PG_DN
-            >;
+            sensor-bindings = <&inc_dec_kp TAB LC(TAB)>, <&scroll_up_down>;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB2  &mkp MB1  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT  &kp F13  &trans  &mkp MB2  &mkp MB1  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_left_right>, <&scroll_up_down>;
