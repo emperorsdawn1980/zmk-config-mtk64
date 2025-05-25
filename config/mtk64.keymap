@@ -74,8 +74,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>,
-                <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+                <&inc_dec_kp RIGHT LEFT>,
+                <&inc_dec_kp UP_ARROW DOWN>;
         };
 
         layer_1 {
@@ -93,7 +93,9 @@
 &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp ASTRK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &trans  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp TAB LC(TAB)>, <&scroll_up_down>;
+            sensor-bindings =
+                <&inc_dec_kp TAB LC(TAB)>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         layer_3 {
