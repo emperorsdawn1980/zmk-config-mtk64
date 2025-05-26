@@ -36,6 +36,22 @@
             tap-ms = <10>; // スクロールのタップ時間
             label = "beh_mouse_wheel_left_right";
         };
+
+        hk_vertical_mouse_scroll: hk_vertical_mouse_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "hk_vertical_mouse_scroll";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <1>;
+        };
+
+        hk_horizon_mouse_scroll: hk_horizon_mouse_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "HK_HORIZON_MOUSE_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+        };
     };
 };
 
@@ -103,7 +119,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT  &kp F13  &trans  &mkp MB2  &mkp MB1  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_left_right>, <&scroll_up_down>;
+            sensor-bindings =
+                <&hk_horizon_mouse_scroll>,
+                <&hk_vertical_mouse_scroll>;
         };
 
         layer_4 {
