@@ -75,9 +75,44 @@
     combos {
         compatible = "zmk,combos";
 
-        window_move2 {
-            bindings = <&kp F13>;
-            key-positions = <19 51 24>;
+        MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <31 32>;
+        };
+
+        MB2 {
+            bindings = <&mkp MB2>;
+            key-positions = <32 33>;
+        };
+
+        back {
+            bindings = <&kp RC(Z)>;
+            key-positions = <31 33>;
+        };
+
+        Foward {
+            bindings = <&kp RC(Y)>;
+            key-positions = <31 34>;
+        };
+
+        MB1- {
+            bindings = <&mkp MB1>;
+            key-positions = <45 46>;
+        };
+
+        MB2- {
+            bindings = <&mkp MB2>;
+            key-positions = <46 47>;
+        };
+
+        back- {
+            bindings = <&kp RC(Z)>;
+            key-positions = <45 47>;
+        };
+
+        Foward- {
+            bindings = <&kp RC(Y)>;
+            key-positions = <45 48>;
         };
     };
 
