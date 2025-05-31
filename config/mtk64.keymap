@@ -104,6 +104,11 @@
             bindings = <&mkp MB2>;
             key-positions = <27 26>;
         };
+
+        left_cut {
+            bindings = <&kp RC(X)>;
+            key-positions = <26 25>;
+        };
     };
 
     keymap {
