@@ -60,7 +60,7 @@
         window_move: window_move {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp RS(LEFT)>;
+            bindings = <&kp LEFT_COMMAND &kp RS(LEFT)>;
             label = "WINDOW_MOVE";
         };
 
@@ -108,6 +108,11 @@
         left_cut {
             bindings = <&kp RC(X)>;
             key-positions = <26 25>;
+        };
+
+        left_window_move {
+            bindings = <&window_move>;
+            key-positions = <28 25>;
         };
     };
 
