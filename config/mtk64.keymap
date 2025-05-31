@@ -94,6 +94,21 @@
             bindings = <&kp RC(Y)>;
             key-positions = <48 45>;
         };
+
+        L-leftclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <28 27>;
+        };
+
+        L-rightclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <27 26>;
+        };
+
+        L-cut {
+            bindings = <&kp RC(X)>;
+            key-positions = <26 25>;
+        };
     };
 
     keymap {
