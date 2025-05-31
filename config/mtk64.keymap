@@ -79,6 +79,11 @@
             bindings = <&mkp LCLK>;
             key-positions = <45 46>;
         };
+
+        mouse_right {
+            bindings = <&mkp RCLK>;
+            key-positions = <46 47>;
+        };
     };
 
     keymap {
