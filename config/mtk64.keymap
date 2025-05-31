@@ -94,6 +94,11 @@
             bindings = <&kp RC(Y)>;
             key-positions = <48 45>;
         };
+
+        letf_MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <27 28>;
+        };
     };
 
     keymap {
