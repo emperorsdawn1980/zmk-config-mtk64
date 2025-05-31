@@ -72,7 +72,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mouse_left {
+            bindings = <&mkp LCLK>;
+            key-positions = <45 46>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
