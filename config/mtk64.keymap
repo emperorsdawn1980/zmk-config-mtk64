@@ -91,11 +91,6 @@
             key-positions = <26 25>;
         };
 
-        left_window_move {
-            bindings = <&window_move2>;
-            key-positions = <28 25>;
-        };
-
         LCLK2 {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
