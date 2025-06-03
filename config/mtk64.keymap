@@ -53,19 +53,6 @@
 };
 
 / {
-    macros {
-        window_move2: window_move {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_SHIFT &kp LEFT_ARROW &kp LEFT_COMMAND>,
-                <&macro_press>;
-
-            label = "WINDOW_MOVE";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
