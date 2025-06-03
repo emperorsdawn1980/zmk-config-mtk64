@@ -8,11 +8,6 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
-
 / {
     behaviors {
         // 垂直スクロール用のbehaviorの設定
@@ -41,9 +36,9 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "hk_vertical_mouse_scroll";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <5>;
         };
 
         hk_horizon_mouse_scroll: hk_horizon_mouse_scroll {
@@ -52,7 +47,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <20>;
+            tap-ms = <5>;
         };
     };
 };
