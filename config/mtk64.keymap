@@ -49,17 +49,6 @@
 
             tap-ms = <20>;
         };
-
-        hold_mouse_kp: hold_mouse_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_MOUSE_KP";
-            bindings = <&mkp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <45 46 47 48 28 27 26 25 31 32 33 34>;
-        };
     };
 };
 
@@ -129,7 +118,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT &kp RIGHT_WIN &kp RIGHT_SHIFT &kp ESCAPE>;
+                <&kp LEFT &kp LEFT_GUI &kp RIGHT_SHIFT &kp ESCAPE>;
 
             label = "WINDOW_MOVE";
         };
@@ -140,7 +129,7 @@
 
         default_layer {
             bindings = <
-&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &mt RS(EQUAL) MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp RIGHT_SHIFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp RIGHT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RS(INT1) SLASH  &kp EQUAL  &kp RIGHT_ALT  &kp RIGHT_WIN  &lt 1 SPACE  &lt 2 LANGUAGE_1  &kp BSPC  &kp ENTER  &kp INT1  &kp ESCAPE  &kp LG(D)  &kp LG(L)  &lt 3 LANGUAGE_2  &kp DEL  &kp ENTER  &tog 2  &kp RC(C)  &kp RC(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &mt RS(EQUAL) MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp RSHIFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp RIGHT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RS(INT1) SLASH  &kp EQUAL  &kp RIGHT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &lt 2 LANGUAGE_1  &kp BSPC  &kp ENTER  &kp INT1  &kp ESCAPE  &kp LG(D)  &kp LG(L)  &lt 3 LANGUAGE_2  &kp DEL  &kp ENTER  &tog 2  &kp RC(C)  &kp RC(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings =
@@ -150,7 +139,7 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &window_move  &kp RC(X)  &mkp MB2  &mkp MB1  &trans  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &kp LC(X)  &mkp MB2  &mkp MB1  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &window_move  &kp RC(X)  &mkp MB2  &mkp MB1  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -172,10 +161,6 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings =
-                <&hk_horizon_mouse_scroll>,
-                <&hk_vertical_mouse_scroll>;
         };
 
         layer_4 {
@@ -194,10 +179,6 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings =
-                <&hk_horizon_mouse_scroll>,
-                <&hk_vertical_mouse_scroll>;
         };
 
         layer_7 {
