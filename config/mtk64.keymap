@@ -118,8 +118,8 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LEFT &kp LEFT_GUI &kp RIGHT_SHIFT>,
-                <&macro_tap_time 100>;
+                <&kp LEFT_GUI &kp RIGHT_SHIFT &kp LEFT>,
+                <&macro_tap_time 20>;
 
             label = "WINDOW_MOVE";
         };
