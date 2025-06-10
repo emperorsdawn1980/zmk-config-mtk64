@@ -146,7 +146,7 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &trans  &trans  &kp PAGE_UP  &kp PAGE_UP  &trans  &trans  &trans  &windows_shift  &kp RC(X)  &mkp MB2  &mkp MB1  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &kp RC(X)  &kp RC(C)  &kp PAGE_UP  &kp PAGE_UP  &kp RC(V)  &trans  &trans  &windows_shift  &kp RC(X)  &mkp MB2  &mkp MB1  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
