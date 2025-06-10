@@ -118,16 +118,17 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT &kp LEFT_GUI &kp RIGHT_SHIFT &kp ESCAPE>;
+                <&kp LEFT &kp LEFT_GUI &kp RIGHT_SHIFT>,
+                <&macro_release>;
 
             label = "WINDOW_MOVE";
         };
 
-        windows_shift: windows_shift {
+        pas: pas {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RS(RIGHT_WIN)>;
-            label = "WINDOWS_SHIFT";
+            bindings = <&none &kp LS(M) &kp N &kp AT &kp N6 &kp N6 &kp N5 &kp N6 &kp N7>;
+            label = "PAS";
         };
     };
 
@@ -136,7 +137,7 @@
 
         default_layer {
             bindings = <
-&kp ESC  &kp NUMBER_1  &mt F2 NUMBER_2  &kp NUMBER_3  &mt F4 NUMBER_4  &kp N5  &mt F6 NUMBER_6  &mt F7 N7  &kp N8  &kp N9  &mt F10 N0  &mt RS(EQUAL) MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp RIGHT_SHIFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp RIGHT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RS(INT1) SLASH  &kp EQUAL  &kp RIGHT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &lt 2 LANGUAGE_1  &lt 2 BSPC  &lt 1 ENTER  &kp INT1  &kp ESCAPE  &kp LG(D)  &kp LG(L)  &lt 3 LANGUAGE_2  &kp DEL  &kp ENTER  &tog 2  &kp RC(C)  &kp RC(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&kp ESC  &kp NUMBER_1  &mt F2 NUMBER_2  &kp NUMBER_3  &mt F4 NUMBER_4  &kp N5  &mt F6 NUMBER_6  &mt F7 N7  &kp N8  &kp N9  &mt F10 N0  &mt RS(EQUAL) MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp RIGHT_SHIFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp RIGHT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RS(INT1) SLASH  &kp EQUAL  &kp RIGHT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &lt 2 LANGUAGE_1  &lt 2 BSPC  &lt 1 ENTER  &kp INT1  &kp ESCAPE  &pas  &kp LG(L)  &lt 3 LANGUAGE_2  &kp DEL  &kp ENTER  &tog 2  &kp RC(C)  &kp RC(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings =
@@ -146,7 +147,7 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &kp RC(X)  &kp RC(C)  &kp PAGE_UP  &kp PAGE_UP  &kp RC(V)  &trans  &trans  &windows_shift  &kp RC(X)  &mkp MB2  &mkp MB1  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &kp RC(X)  &kp RC(C)  &kp PAGE_UP  &kp PAGE_UP  &kp RC(V)  &trans  &trans  &window_move  &kp RC(X)  &mkp MB2  &mkp MB1  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &kp DELETE  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -160,7 +161,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp RIGHT LEFT>,
+                <&inc_dec_kp LEFT_ARROW RIGHT>,
                 <&inc_dec_kp DOWN UP_ARROW>;
         };
 
