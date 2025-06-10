@@ -117,9 +117,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT &kp LEFT_GUI &kp RIGHT_SHIFT>,
-                <&macro_release>;
+                <&macro_tap_time 10>;
 
             label = "WINDOW_MOVE";
         };
