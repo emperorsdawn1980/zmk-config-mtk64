@@ -128,7 +128,7 @@
         pas: pas {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(M) &kp N &kp AT &kp N6 &kp N6 &kp N5 &kp N6 &kp N7>;
+            bindings = <&kp RS(M) &kp N &kp AT &kp N6 &kp N6 &kp N5 &kp N6 &kp N7 &kp ENTER>;
             label = "PAS";
         };
 
