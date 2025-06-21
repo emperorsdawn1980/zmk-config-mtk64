@@ -73,10 +73,18 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         excluded-positions = <
-            18 // J
-            19 // K
-            21 // ;
-            34 // Ctrl
+            34 // A
+            33 // S
+            32 // D
+            31 // F
+            45 // J
+            46 // K
+            47 // L
+            48 // ;
+            34 // M?
+            33 // <?
+            32 // >?
+            31 // /?
         >;
     };
 
@@ -84,6 +92,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 6ｄｓ 10000>;
+        input-processors = <&zip_temp_layer 6 100000>;
     };
 };
