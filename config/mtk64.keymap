@@ -160,7 +160,7 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &trans  &screenshot  &kp PAGE_UP  &kp PAGE_UP  &window_move  &window_move  &trans  &window_move  &trans  &trans  &screenshot  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RC(X)  &kp RC(C)  &kp RC(V)  &kp RC(Z)  &kp RC(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RC(C)  &kp RC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &none  &none  &none  &none  &none  &kp PAGE_UP  &none  &screenshot  &kp PAGE_UP  &kp PAGE_UP  &window_move  &window_move  &none  &window_move  &none  &none  &screenshot  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &kp RC(X)  &kp RC(C)  &kp RC(V)  &kp RC(Z)  &kp RC(Y)  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -170,7 +170,7 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp ASTRK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp NUMBER_5  &kp N6  &kp MINUS  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS  &kp ASTRK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt NUMBER_0  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
