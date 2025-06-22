@@ -134,7 +134,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&tog_off LAYER_MOUSE>;
+            bindings = <&tog_off 6>;
             label = "exit_AML";
         };
 
@@ -192,7 +192,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl_250 LAYER_MOUSE>;
+                <&sl_250 6>;
 
             label = "MKP_EXIT_AML";
         };
