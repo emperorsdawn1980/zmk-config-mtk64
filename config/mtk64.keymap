@@ -160,7 +160,7 @@
 
         layer_1 {
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &none  &none  &none  &none  &none  &kp PAGE_UP  &none  &screenshot  &kp PAGE_UP  &kp PAGE_UP  &window_move  &window_move  &none  &window_move  &none  &none  &screenshot  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &kp RC(X)  &kp RC(C)  &kp RC(V)  &kp RC(Z)  &kp RC(Y)  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp RS(EQUAL)  &none  &none  &none  &none  &none  &kp PAGE_UP  &none  &screenshot  &kp PAGE_UP  &kp PAGE_UP  &window_move  &window_move  &none  &window_move  &none  &none  &screenshot  &kp PAGE_DOWN  &kp HOME  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &kp RC(X)  &kp RC(C)  &kp RC(V)  &kp RC(Z)  &kp RC(Y)  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
