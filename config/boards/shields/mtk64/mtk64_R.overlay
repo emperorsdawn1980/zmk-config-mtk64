@@ -66,5 +66,25 @@
         snipe-layers = <2>;
     };
 };
+// 以下、InputProcessorを使用したオートマウスレイヤーを転記
 
+#include <input/processors.dtsi>
+/ {
+   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <
+            27 // D
+            28 // F
+            45 // M
+            46 // ,
+        >;
+    };
 
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 6 100000>;
+    };
+};
