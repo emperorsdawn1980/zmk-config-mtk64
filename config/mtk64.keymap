@@ -4,10 +4,131 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
+// スクロール量の設定
+
+// #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
+/ {
+    behaviors {
+        // 垂直スクロール用のbehaviorの設定
+
+        scroll_up_down: beh_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <10>; // スクロールのタップ時間
+            label = "beh_mouse_wheel_up_down";
+        };
+
+        // 水平スクロール用のbehaviorの設定
+
+        scroll_left_right: beh_mouse_wheel_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+
+            tap-ms = <10>; // スクロールのタップ時間
+            label = "beh_mouse_wheel_left_right";
+        };
+
+        hk_vertical_mouse_scroll: hk_vertical_mouse_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "hk_vertical_mouse_scroll";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        hk_horizon_mouse_scroll: hk_horizon_mouse_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "HK_HORIZON_MOUSE_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+
+            tap-ms = <20>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        mouse_left {
+            bindings = <&mkp LCLK>;
+            key-positions = <45 46>;
+        };
+
+        mouse_right {
+            bindings = <&mkp RCLK>;
+            key-positions = <46 47>;
+        };
+
+        back {
+            bindings = <&kp RC(Z)>;
+            key-positions = <47 48>;
+        };
+
+        foward {
+            bindings = <&kp RC(Y)>;
+            key-positions = <48 45>;
+        };
+
+        letf_MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <27 28>;
+        };
+
+        left_MB2 {
+            bindings = <&mkp MB2>;
+            key-positions = <27 26>;
+        };
+
+        left_cut {
+            bindings = <&kp RC(X)>;
+            key-positions = <26 25>;
+        };
+
+        LCLK2 {
+            bindings = <&mkp LCLK>;
+            key-positions = <31 32>;
+        };
+
+        RCLK2 {
+            bindings = <&mkp RCLK>;
+            key-positions = <32 33>;
+        };
+
+        back2 {
+            bindings = <&kp RC(Z)>;
+            key-positions = <33 34>;
+        };
+
+        forward2 {
+            bindings = <&kp RC(Y)>;
+            key-positions = <31 34>;
+        };
+    };
+
+    macros {
+        window_move: window_move {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp RIGHT_SHIFT &kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp RIGHT_SHIFT &kp LEFT>;
+
+            label = "WINDOW_MOVE";
+        };
+
 // 以下、オマケ: マクロで再現する方法から転記　
 
-/{
-    macros {
+
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
@@ -137,130 +258,8 @@
             quick-tap-ms = <200>;
         };
     };
-}
 
 // 以上、オマケ: マクロで再現する方法から転記　終了
-
-// スクロール量の設定
-
-// #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-
-/ {
-    behaviors {
-        // 垂直スクロール用のbehaviorの設定
-
-        scroll_up_down: beh_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <10>; // スクロールのタップ時間
-            label = "beh_mouse_wheel_up_down";
-        };
-
-        // 水平スクロール用のbehaviorの設定
-
-        scroll_left_right: beh_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-
-            tap-ms = <10>; // スクロールのタップ時間
-            label = "beh_mouse_wheel_left_right";
-        };
-
-        hk_vertical_mouse_scroll: hk_vertical_mouse_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "hk_vertical_mouse_scroll";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
-        hk_horizon_mouse_scroll: hk_horizon_mouse_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "HK_HORIZON_MOUSE_SCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-
-            tap-ms = <20>;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        mouse_left {
-            bindings = <&mkp LCLK>;
-            key-positions = <45 46>;
-        };
-
-        mouse_right {
-            bindings = <&mkp RCLK>;
-            key-positions = <46 47>;
-        };
-
-        back {
-            bindings = <&kp RC(Z)>;
-            key-positions = <47 48>;
-        };
-
-        foward {
-            bindings = <&kp RC(Y)>;
-            key-positions = <48 45>;
-        };
-
-        letf_MB1 {
-            bindings = <&mkp MB1>;
-            key-positions = <27 28>;
-        };
-
-        left_MB2 {
-            bindings = <&mkp MB2>;
-            key-positions = <27 26>;
-        };
-
-        left_cut {
-            bindings = <&kp RC(X)>;
-            key-positions = <26 25>;
-        };
-
-        LCLK2 {
-            bindings = <&mkp LCLK>;
-            key-positions = <31 32>;
-        };
-
-        RCLK2 {
-            bindings = <&mkp RCLK>;
-            key-positions = <32 33>;
-        };
-
-        back2 {
-            bindings = <&kp RC(Z)>;
-            key-positions = <33 34>;
-        };
-
-        forward2 {
-            bindings = <&kp RC(Y)>;
-            key-positions = <31 34>;
-        };
-    };
-
-    macros {
-        window_move: window_move {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp RIGHT_SHIFT &kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp RIGHT_SHIFT &kp LEFT>;
-
-            label = "WINDOW_MOVE";
-        };
 
         pas: pas {
             compatible = "zmk,behavior-macro";
