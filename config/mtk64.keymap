@@ -71,7 +71,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl_250 MOUSE>;
+                <&sl_250>;
 
             label = "MKP_EXIT_AML";
         };
