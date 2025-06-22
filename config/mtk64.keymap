@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // 以下、オマケ: マクロで再現する方法から転記　
-#define MOUSE 5
 
 /{
     macros {
