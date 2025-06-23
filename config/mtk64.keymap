@@ -4,6 +4,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// .keymapファイルに以下を追記すると、クリックした後250ミリ秒後にAMLが解除されます。ここから
+#include <input/processors.dtsi>
+
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 250>;
+};
+//  .keymapファイルに以下を追記すると、クリックした後250ミリ秒後にAMLが解除されます。ここまで
+
 // スクロール量の設定
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
