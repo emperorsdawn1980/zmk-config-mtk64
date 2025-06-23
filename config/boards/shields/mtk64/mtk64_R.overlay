@@ -18,6 +18,7 @@
 };
 */
 
+#include <input/processors.dtsi> //追記
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
