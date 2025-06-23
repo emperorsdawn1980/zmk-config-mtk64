@@ -18,14 +18,13 @@
 };
 */
 
-#include <input/processors.dtsi> //追記
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
 // 以下、マウスキーを押すまでマウスレイヤーに留まる
- input-processors = <&zip_temp_layer 6 250>;
+ input-processors = <&zip_temp_layer 6 500>;
 
     };
 };
@@ -77,7 +76,6 @@
    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
-        require-prior-idle-ms = <200>;
         excluded-positions = <
             27 // D
             28 // F
@@ -92,6 +90,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 6 250>;
+        input-processors = <&zip_temp_layer 6 500>;
     };
 };
