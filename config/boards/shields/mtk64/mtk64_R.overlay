@@ -18,17 +18,6 @@
 };
 */
 
-// / {
-//    trackball_listener {
-//        compatible = "zmk,input-listener";
-//        device = <&trackball>;
-//
-// 以下、マウスキーを押すまでマウスレイヤーに留まる
-// input-processors = <&zip_temp_layer 6 500>;
-//
-//    };
-// };
-
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -78,18 +67,12 @@
 };
 
 / {
-//   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer { //無効
-//      compatible = "zmk,input-processor-temp-layer"; //無効
-//      #input-processor-cells = <2>; //無効？
         excluded-positions = <
             27 // D
             28 // F
-//          33 // J
-//          34 // K
             45 // M
             46 // ,
         >;
-//    };
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
