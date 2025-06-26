@@ -73,21 +73,22 @@
 
 #include <input/processors.dtsi>
 
-&zip_temp_layer {
-    require-prior-idle-ms = <200>;
-};
+&zip_temp_layer {　//キー入力中のオートマウスレイヤー誤爆防止
+    require-prior-idle-ms = <200>; //キー入力中のオートマウスレイヤー誤爆防止
+}; //キー入力中のオートマウスレイヤー誤爆防止
 
 / {
-   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
+//   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer { //無効
+//      compatible = "zmk,input-processor-temp-layer"; //無効
+
+//      #input-processor-cells = <2>; //無効？
         excluded-positions = <
 //          27 // D
             28 // F
 //          33 // J
 //          34 // K
             45 // M
-//          46 // ,
+　          46 // ,
         >;
     };
 
