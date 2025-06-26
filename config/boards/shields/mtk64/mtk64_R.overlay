@@ -18,16 +18,16 @@
 };
 */
 
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-
+// / {
+//    trackball_listener {
+//        compatible = "zmk,input-listener";
+//        device = <&trackball>;
+//
 // 以下、マウスキーを押すまでマウスレイヤーに留まる
- input-processors = <&zip_temp_layer 6 500>;
-
-    };
-};
+// input-processors = <&zip_temp_layer 6 500>;
+//
+//    };
+// };
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -86,10 +86,10 @@
         >;
     };
 
-//    trackball_listener {
-//        compatible = "zmk,input-listener";
-//        device = <&trackball>;
-//
-//        input-processors = <&zip_temp_layer 6 500>;
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 6 10000>;
     };
 };
