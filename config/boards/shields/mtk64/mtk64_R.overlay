@@ -83,12 +83,12 @@
 
 //      #input-processor-cells = <2>; //無効？
         excluded-positions = <
-//          27 // D
+            27 // D
             28 // F
 //          33 // J
 //          34 // K
             45 // M
-　          46 // ,
+            46 // ,
         >;
     };
 
