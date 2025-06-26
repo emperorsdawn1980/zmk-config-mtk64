@@ -89,7 +89,7 @@
             45 // M
             46 // ,
         >;
-    };
+//    };
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
