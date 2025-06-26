@@ -80,7 +80,6 @@
 / {
 //   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer { //無効
 //      compatible = "zmk,input-processor-temp-layer"; //無効
-
 //      #input-processor-cells = <2>; //無効？
         excluded-positions = <
             27 // D
@@ -91,11 +90,9 @@
             46 // ,
         >;
     };
-
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
         input-processors = <&zip_temp_layer 6 10000>;
     };
 };
