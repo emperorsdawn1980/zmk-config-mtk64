@@ -73,9 +73,9 @@
 
 #include <input/processors.dtsi>
 
-&zip_temp_layer {　//キー入力中のオートマウスレイヤー誤爆防止
-    require-prior-idle-ms = <200>; //キー入力中のオートマウスレイヤー誤爆防止
-}; //キー入力中のオートマウスレイヤー誤爆防止
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
 
 / {
 //   /omit-if-no-ref/ zip_temp_layer: zip_temp_layer { //無効
