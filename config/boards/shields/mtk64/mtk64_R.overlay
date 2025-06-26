@@ -86,10 +86,10 @@
         >;
     };
 
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-
-        input-processors = <&zip_temp_layer 6 500>;
+//    trackball_listener {
+//        compatible = "zmk,input-listener";
+//        device = <&trackball>;
+//
+//        input-processors = <&zip_temp_layer 6 500>;
     };
 };
