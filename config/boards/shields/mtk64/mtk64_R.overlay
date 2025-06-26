@@ -65,13 +65,18 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 //       automouse-layer = <6>;
-//       scroll-layers = <1>;
-//       snipe-layers = <2>;
+//       scroll-layers = <2>;
+         snipe-layers = <1>;
     };
 };
 // 以下、InputProcessorを使用したオートマウスレイヤーを転記
 
 #include <input/processors.dtsi>
+
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
+
 / {
    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
