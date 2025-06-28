@@ -18,6 +18,14 @@
 };
 */
 
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_temp_layer 6 10000>;
+    };
+};
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -73,12 +81,4 @@
 //          46 // ,
             47 // .
         >;
-};
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&zip_temp_layer 6 10000>;
-    };
 };
