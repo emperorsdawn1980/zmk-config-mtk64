@@ -117,6 +117,16 @@
             bindings = <&kp RC(Y)>;
             key-positions = <31 34>;
         };
+
+        vcxz {
+            bindings = <&mkp MCLK>;
+            key-positions = <40 39 38 37>;
+        };
+
+        m,.. {
+            bindings = <&mkp MCLK>;
+            key-positions = <45 46 48 47>;
+        };
     };
 
     macros {
