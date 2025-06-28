@@ -127,6 +127,21 @@
             bindings = <&mkp MCLK>;
             key-positions = <45 46 48 47>;
         };
+
+        L-LeftClick {
+            bindings = <&mkp LCLK>;
+            key-positions = <40 39>;
+        };
+
+        L-RightClick {
+            bindings = <&mkp RCLK>;
+            key-positions = <39 38>;
+        };
+
+        L-Cut {
+            bindings = <&kp RC(X)>;
+            key-positions = <38 37>;
+        };
     };
 
     macros {
