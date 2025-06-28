@@ -128,17 +128,17 @@
             key-positions = <45 46 48 47>;
         };
 
-        L-LeftClick {
+        l-leftclick {
             bindings = <&mkp LCLK>;
             key-positions = <40 39>;
         };
 
-        L-RightClick {
+        l-rightclick {
             bindings = <&mkp RCLK>;
             key-positions = <39 38>;
         };
 
-        L-Cut {
+        l-cut {
             bindings = <&kp RC(X)>;
             key-positions = <38 37>;
         };
