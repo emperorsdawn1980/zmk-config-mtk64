@@ -65,7 +65,7 @@
 #include <input/processors.dtsi>
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+//    require-prior-idle-ms = <200>; //コメントアウト
         excluded-positions = <
 //          27 // D
 //          28 // F
@@ -76,6 +76,10 @@
             47 // .
         >;
 };
+
+&zip_temp_layer { //追記
+    require-prior-idle-ms = <200>; //追記
+}; //追記
 
 / {
     trackball_listener {
