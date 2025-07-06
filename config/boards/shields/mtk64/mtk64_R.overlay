@@ -69,8 +69,8 @@
         excluded-positions = <
 //          27 // D
 //          28 // F
-          40 // v
-          38 // x
+//          40 // v
+//          38 // x
 //          45 // M
 //          46 // ,
 //          47 // .
@@ -86,6 +86,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 6 10000>;
+//        input-processors = <&zip_temp_layer 6 10000>;
     };
 };
